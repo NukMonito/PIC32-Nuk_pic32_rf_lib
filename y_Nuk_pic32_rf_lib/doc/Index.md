@@ -19,7 +19,7 @@
 * [Clase Rf](Rf.md)
 
 **Nota**
->La documentación viene con muchos ejemplos funcionales que pueden sevir para 
+>La documentación viene con muchos ejemplos funcionales que pueden servir para 
 probar la librería.
 
 ![separa](img/Nuk-separa.jpg)

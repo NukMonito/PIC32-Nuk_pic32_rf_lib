@@ -99,7 +99,7 @@ Rf (
  
 **Parámetros**
 >char *chanel*
->>Canal de radio RF en el rango (0..196). El periferico funcionará a 
+>>Canal de radio RF en el rango (0..196). El periférico funcionará a 
 2.400 + *chanel* MHz.
 
 > 
@@ -108,14 +108,14 @@ Rf (
 
 > 
 >const char* *txdir*
->> Direción Tx. Dispositivo al que envia las tranmisiones.
+>> Direción Tx. Dispositivo al que envía los mensajes.
 
 > 
 >int *paylod_len*
 >> Tamaño del paquete en el rango de (1..30). Este número no limita los bytes 
-que se pueden tranmitir en cada llamada a los comandos *put*. Aunque es 
+que se pueden transmitir en cada llamada a los comandos *put*. Aunque es 
 preferible ajustarlo a su máximo más frecuente. Por ejemplo: Si sabemos que la 
-informacón a enviar en la mayoría de las trasmisiones, no supera los 5 bytes, 
+información a enviar en la mayoría de las trasmisiones, no supera los 5 bytes, 
 no tiene sentido que definamos este parámetro con un valor de 30; lo más 
 eficiente será que establezcamos un valor de 5. Esto no impide hacer 
 transmisiones de más bytes. El máximo número que se puede transmitir es el 
@@ -191,7 +191,7 @@ haya recibido parte del mensaje.
 
 **Ejemplo 1**
 >El siguiente código prepara un objeto asociado a un dispositivo RF.
-En cada iteración de *loop()* transmite el mesaje *¡¡¡ Hola mundo !!!*
+En cada iteración de *loop()* transmite el mensaje *¡¡¡ Hola mundo !!!*
  
 ```C
 //----------------------------------------------
@@ -325,7 +325,7 @@ void put_char(char byte)
 
 **Parámetros**
 >const char *byte*
->> *byte* a trnasmitir.
+>> *byte* a transmitir.
 
 **Retorno**
 >void
@@ -491,7 +491,7 @@ int get(const char* cadena)
 >> Cantidad de bytes leídos de la **Fifo**.
 
 **Nota**
->Es resposabilidad del programador que la *cadena* disponga del tamaño 
+>Es responsabilidad del programador que la *cadena* disponga del tamaño 
 suficiente para albergar los bytes recibidos. 
 
 **Ejemplo**
@@ -569,7 +569,7 @@ bool get(const char* cadena, int size)
 
 **Retorno**
 >bool
->> **true** Habian suficientes bytes. La cadena ha sido completada.
+>> **true** Habían suficientes bytes. La cadena ha sido completada.
 >>
 >> **false** No hay suficientes bytes. El contenido de la cadena es invalido.
 
@@ -707,7 +707,7 @@ bool get_line(char* cadena)
 
 **Descripción**
 >Lee los bytes pendientes hasta encontrar un final de linea (*EOL*). 
-Si entre los bytes recibidos no aparace *EOL*, la función devuelve
+Si entre los bytes recibidos no aparece *EOL*, la función devuelve
 **false** y el contenido de la *cadena* será invalido.
 
 **Parámetros**

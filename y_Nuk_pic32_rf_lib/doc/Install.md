@@ -16,16 +16,16 @@
 
 
 **Requisitos**
->Esta libreria depende de la escrita por el mismo autor 
+>Esta librería depende de la escrita por el mismo autor 
 **nuk_Pic32_essentials_lib**, que debe instalarse en primer lugar para que 
 todo funcione.
 
 **Sencillo**
 >* Bájate del contenido de la carpeta de GitHub en un fichero Zip.
->* Copia el fichero zip en la carpera que prefieras y desempaquétalo. Esto 
+>* Copia el fichero zip en la carpeta que prefieras y desempaquétalo. Esto 
 creará la carpeta *Nuk_pic32_rf_lib-master*. Dentro está la que nos 
 interesa: *y_Nuk_pic32_rf_lib*, que es la librería en sí.
->* Copia la carpeta *y_Nuk_pic32_rf_lib* en la carpeta donde reside la libreria 
+>* Copia la carpeta *y_Nuk_pic32_rf_lib* en la carpeta donde reside la librería 
 *z_Nuk_pic32_essentials_lib*
 >* Borra todo lo demás.
 >* Listo.
