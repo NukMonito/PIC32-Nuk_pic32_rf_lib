@@ -47,10 +47,10 @@ Se operan con:
 
 * **Métodos**
 	* **Tx**
-		* [void **put**(const char\* *cadena*)](#M01)
-		* [void **put**(char\* *cadena*, unsigned int *size*)](#M02)
-		* [void **put_char**(char *byte*)](#M03)
-		* [void **put_line**(const char\* *cadena*)](#M04)
+		* [bool **put**(const char\* *cadena*)](#M01)
+		* [bool **put**(char\* *cadena*, unsigned int *size*)](#M02)
+		* [bool **put_char**(char *byte*)](#M03)
+		* [bool **put_line**(const char\* *cadena*)](#M04)
 		* [bool **put_var**(const char\* *template*, void/* *var*, ...)](#M05)
 	* **Rx**
 		* [int **get**(char* *cadena*)](#G01)
@@ -116,9 +116,9 @@ Rf (
 que se pueden tranmitir en cada llamada a los comandos *put*. Aunque es 
 preferible ajustarlo a su máximo más frecuente. Por ejemplo: Si sabemos que la 
 informacón a enviar en la mayoría de las trasmisiones, no supera los 5 bytes, 
-no tiene sentido que difinamos este parámetro con un valor de 30; lo más 
+no tiene sentido que definamos este parámetro con un valor de 30; lo más 
 eficiente será que establezcamos un valor de 5. Esto no impide hacer 
-transmisiones de más bytes. El máximo número que se pueden transmitir es el 
+transmisiones de más bytes. El máximo número que se puede transmitir es el 
 fijado en la macro BUFF_SIZE establecida en la librería *essentials*.
 
 > 
@@ -134,13 +134,10 @@ al dispositivo RF.
 >>Puertos digitales con los que el módulo gestionará el dispositivo RF.
  
 **Retorno**
->bool
->> true == La trasmisión se ha realizado con éxito.
->> false == La transmisión ha fallado. En este caso es posible que el receptor 
-haya recibido parte del mensaje.
+>void
  
 **Ejemplo**
-> El siguiente fragmento de código prepara un objeto rf.
+> El siguiente fragmento de código prepara un objeto de la clase Rf.
 
 ```C
 Spi_mstr spi(SPI2,7000000);
@@ -149,6 +146,8 @@ Digital rf_csn(DB14);
 Digital rf_irq(DB06);
 Rf radio(100,"1234A","1234B",30,spi,rf_ce,rf_csn,rf_irq);
 ```
+
+
 
 
 
@@ -172,7 +171,7 @@ Rf radio(100,"1234A","1234B",30,spi,rf_ce,rf_csn,rf_irq);
 [Top](#TOP) | [Index](Index.md)
 
 ```C
-void put(const char* cadena)
+bool put(const char* cadena)
 ```
 
 **Descripción**
@@ -184,7 +183,8 @@ void put(const char* cadena)
  
 **Retorno**
 >bool
->> true == La trasmisión se ha realizado con éxito.
+>> true == La trasmisión se ha realizado con éxito. 
+>>
 >> false == La transmisión ha fallado. En este caso es posible que el receptor 
 haya recibido parte del mensaje.
 
@@ -241,7 +241,7 @@ main(int argc, char** argv) {
 [Top](#TOP) | [Index](Index.md)
 
 ```C
-void put(char* cadena,unsigned int size)
+bool put(char* cadena,unsigned int size)
 ```
 
 **Descripción**
@@ -257,6 +257,7 @@ void put(char* cadena,unsigned int size)
 **Retorno**
 >bool
 >> true == La trasmisión se ha realizado con éxito.
+>>
 >> false == La transmisión ha fallado. En este caso es posible que el receptor 
 haya recibido parte del mensaje.
 
@@ -342,7 +343,7 @@ void put_char(char byte)
 [Top](#TOP) | [Index](Index.md)
 
 ```C
-void put_line(const char* cadena)
+bool put_line(const char* cadena)
 ```
 
 **Descripción**
@@ -355,7 +356,8 @@ transmisión un byte de fin de linea (EOL).
 
 **Retorno**
 >bool
->> true == La trasmisión se ha realizado con éxito.
+>> true == La trasmisión se ha realizado con éxito. 
+>>
 >> false == La transmisión ha fallado. En este caso es posible que el receptor 
 haya recibido parte del mensaje.
 
@@ -396,7 +398,8 @@ el patrón *template*
 
 **Retorno**
 >bool
->> true == La trasmisión se ha realizado con éxito.
+>> true == La trasmisión se ha realizado con éxito. 
+>>
 >> false == La transmisión ha fallado. En este caso es posible que el receptor 
 haya recibido parte del mensaje.
 
@@ -449,6 +452,8 @@ main(int argc, char** argv) {
 	}
 
 ```
+
+
 
 
 
