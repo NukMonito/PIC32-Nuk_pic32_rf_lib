@@ -16,7 +16,7 @@
 
 * [Introducción](Intro.md)
 * [Instalación](Install.md)
-* [Clases Rf](Rf.md)
+* [Clase Rf](Rf.md)
 
 **Nota**
 >La documentación viene con muchos ejemplos funcionales que pueden sevir para 
