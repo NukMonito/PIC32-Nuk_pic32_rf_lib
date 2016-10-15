@@ -134,7 +134,10 @@ al dispositivo RF.
 >>Puertos digitales con los que el módulo gestionará el dispositivo RF.
  
 **Retorno**
->void
+>bool
+>> true == La trasmisión se ha realizado con éxito.
+>> false == La transmisión ha fallado. En este caso es posible que el receptor 
+haya recibido parte del mensaje.
  
 **Ejemplo**
 > El siguiente fragmento de código prepara un objeto rf.
@@ -180,7 +183,11 @@ void put(const char* cadena)
 >> Cadena de bytes terminada en *NULL*.
  
 **Retorno**
->void
+>bool
+>> true == La trasmisión se ha realizado con éxito.
+>> false == La transmisión ha fallado. En este caso es posible que el receptor 
+haya recibido parte del mensaje.
+
 
 **Ejemplo 1**
 >El siguiente código prepara un objeto asociado a un dispositivo RF.
@@ -248,7 +255,11 @@ void put(char* cadena,unsigned int size)
 >> Número de bytes a transmitir
  
 **Retorno**
->void
+>bool
+>> true == La trasmisión se ha realizado con éxito.
+>> false == La transmisión ha fallado. En este caso es posible que el receptor 
+haya recibido parte del mensaje.
+
 
 **Ejemplo 1**
 >El siguiente código prepara un objeto asociado a un dispositivo RF.
@@ -343,7 +354,11 @@ transmisión un byte de fin de linea (EOL).
 >> Cadena de byte terminada en 0 (cero).
 
 **Retorno**
->void
+>bool
+>> true == La trasmisión se ha realizado con éxito.
+>> false == La transmisión ha fallado. En este caso es posible que el receptor 
+haya recibido parte del mensaje.
+
 
 
 
@@ -380,7 +395,11 @@ el patrón *template*
 >> Puteros a cada una de las variables a transmitir.
 
 **Retorno**
->void
+>bool
+>> true == La trasmisión se ha realizado con éxito.
+>> false == La transmisión ha fallado. En este caso es posible que el receptor 
+haya recibido parte del mensaje.
+
 
 **Ejemplo**
 >El siguiente código prepara un objeto asociado a un dispositivo RF.
