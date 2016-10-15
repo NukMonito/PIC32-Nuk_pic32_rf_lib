@@ -1,4 +1,4 @@
-![Nuk](img/Nuk-pic-essentials-lib.jpg)
+![Nuk](img/Nuk-pic-rf-lib.jpg)
 ------------------------------------------------------------------------------
 
 # Descripción
