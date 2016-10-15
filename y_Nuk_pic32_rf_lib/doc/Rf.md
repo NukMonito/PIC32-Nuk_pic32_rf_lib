@@ -394,7 +394,7 @@ el patrón *template*
 
 > 
 >void* var, ...
->> Puteros a cada una de las variables a transmitir.
+>> Punteros a cada una de las variables a transmitir.
 
 **Retorno**
 >bool
