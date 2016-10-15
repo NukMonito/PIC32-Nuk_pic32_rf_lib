@@ -30,7 +30,7 @@ interesa: *y_Nuk_pic32_rf_lib*, que es la librería en sí.
 >* Borra todo lo demás.
 >* Listo.
 
-**Nota***
+**Nota**
 >La ayuda de la librería está en *y_Nuk_pic32_rf_lib/doc*. El fichero 
 de entrada es *index.md*. Está escrita en formato markdown (.md). Para poder 
 leer estos ficheros con tu navegador, probablemente deberás instalar un plugin.

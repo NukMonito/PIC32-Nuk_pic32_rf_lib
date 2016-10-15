@@ -20,7 +20,7 @@
 
 **Nota**
 >La documentación viene con muchos ejemplos funcionales que pueden sevir para 
-probar el funcionamiento de la librería.
+probar la librería.
 
 ![separa](img/Nuk-separa.jpg)
 [Index](Index.md)
