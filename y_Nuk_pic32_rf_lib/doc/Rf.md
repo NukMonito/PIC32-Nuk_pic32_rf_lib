@@ -433,7 +433,7 @@ Loop(void) {
 	strcpy(S,"¡¡¡ Hola mundo !!!");
 	I++;
 
-	radio.put_var("cids",C,I,D,S);
+	radio.put_var("cids",&C,&I,&D,&S);
 
 	//...
 	//...
